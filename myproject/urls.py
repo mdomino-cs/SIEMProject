@@ -6,5 +6,5 @@ def index(request):
     return render(request,'index.html')
 
 urlpatterns = [
-    path('', index),
+    path('index', index, name='index'),
 ]
