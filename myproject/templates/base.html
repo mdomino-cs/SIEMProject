@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My SIEM{% endblock %}</title>
+</head>
+<body>
+    <header style="background-color: #f8f9fa; padding: 10px; text-align: center; border-bottom: 1px solid #e9ecef; margin-bottom: 20px;">
+        <nav>
+            <a href="{% url 'home' %}" style="margin: 0 10px; text-decoration: none; color: #007bff;">Home</a>
+            <a href="{% url 'logs' %}" style="margin: 0 10px; text-decoration: none; color: #007bff;">Logs</a>
+            <a href="{% url 'alerts' %}" style="margin: 0 10px; text-decoration: none; color: #007bff;">Alerts</a>
+            <a href="{% url 'settings' %}" style="margin: 0 10px; text-decoration: none; color: #007bff;">Settings</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
