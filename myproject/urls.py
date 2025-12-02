@@ -6,5 +6,8 @@ def index(request):
     return render(request,'index.html')
 
 urlpatterns = [
-    path('index', index, name='index'),
+    # Serve the site root at '/'
+    path('', index, name='index'),
+    # Optional convenience route; include trailing slash for common behavior
+    path('index/', index, name='index_alt'),
 ]
